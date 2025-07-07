@@ -1,0 +1,61 @@
+/* Base styles for the wishlist icon button */
+.wishlist-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  /* Make the button background transparent by default */
+  background: transparent;
+  border: none;
+  /* Keep it round but slightly larger for easier clicking */
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; /* Slightly larger heart icon */
+  cursor: pointer;
+  z-index: 10;
+  color: #a0a0a0; /* Subtle grey for the empty heart */
+  /* Remove shadows from the button itself to keep it minimal */
+  box-shadow: none;
+  /* Smooth transition for color and subtle transform effects */
+  transition: color 0.2s ease-out, transform 0.15s ease-out;
+  outline: none; /* Remove default focus outline */
+}
+
+/* Hover effect: Subtle lift and slightly darker outline/shadow for the button shape */
+.wishlist-icon:hover {
+  color: #777; /* Slightly darker grey on hover */
+  transform: translateY(-1px); /* Subtle lift effect */
+  /* Add a very light, subtle ring on hover to define the button's presence */
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  border-radius: 50%; /* Ensure the shadow is round */
+}
+
+/* Active (pressed) effect: Simulates pushing the button */
+.wishlist-icon:active {
+  transform: translateY(0) scale(0.95); /* A slight shrink for a press effect */
+  color: #555; /* Even darker on press */
+  box-shadow: none; /* Remove hover shadow on active */
+}
+
+/* Styles for when the heart is clicked (filled) */
+.wishlist-icon--clicked {
+  color: #e00000; /* Vibrant red for the filled heart */
+  /* No changes to button background or shadows when clicked, only heart color */
+  transform: scale(1.1); /* A subtle pop when it becomes active */
+}
+
+/* Specific hover effect for the clicked state */
+.wishlist-icon--clicked:hover {
+  color: #ff3333; /* Slightly brighter red on hover when clicked */
+  transform: scale(1.15) translateY(-1px); /* More pronounced pop and lift */
+  box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.2); /* Subtle red ring on hover when clicked */
+}
+
+/* Specific active effect for the clicked state */
+.wishlist-icon--clicked:active {
+  transform: scale(1.05); /* Shrink slightly when pressed in clicked state */
+  color: #c00000; /* Darker red on press */
+  box-shadow: none; /* Remove hover shadow on active */
+}

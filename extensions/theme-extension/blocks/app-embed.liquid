@@ -1,0 +1,14 @@
+<div id="product-data" data-product-id="{{ product.id }}"></div>
+<div id="customer-data" data-customer-id="{{ customer.id }}"></div>
+
+{{ 'wishlist.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'wishlist.js' | asset_url }}" defer></script>
+<script src="{{ 'wishlistHelpers.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Wishlist Block",
+  "target": "body",
+  "settings": []
+}
+{% endschema %}

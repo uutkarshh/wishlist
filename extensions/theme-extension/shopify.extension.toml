@@ -1,0 +1,7 @@
+name = "Wishlist Embed"
+type = "theme_app_extension"
+
+[[app_embeds]]
+name = "Wishlist Block"
+target = "body"
+template = "app-embed.liquid"

@@ -3,7 +3,7 @@
 client_id = "9b1d7574fe125102917880fdfe2a8dd4"
 name = "wishlist-app-utk"
 handle = "wishlist-app-utk"
-application_url = "https://percentage-massage-forever-liberal.trycloudflare.com"
+application_url = "https://your-railway-app.up.railway.app"
 embedded = true
 
 [build]
@@ -26,13 +26,16 @@ api_version = "2025-07"
 scopes = "write_products,write_app_proxy,read_products,read_customers,write_customers"
 
 [app_proxy]
-url = "https://percentage-massage-forever-liberal.trycloudflare.com/api/proxy"
+url = "https://your-railway-app.up.railway.app/api/proxy"
 subpath = "utk"
 prefix = "apps"
 
 
 [auth]
-redirect_urls = ["https://percentage-massage-forever-liberal.trycloudflare.com/auth/callback", "https://percentage-massage-forever-liberal.trycloudflare.com/auth/shopify/callback", "https://percentage-massage-forever-liberal.trycloudflare.com/api/auth/callback"]
-
+redirect_urls = [
+  "https://your-railway-app.up.railway.app/auth/callback",
+  "https://your-railway-app.up.railway.app/auth/shopify/callback",
+  "https://your-railway-app.up.railway.app/api/auth/callback"
+]
 [pos]
 embedded = false
